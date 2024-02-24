@@ -5,7 +5,7 @@
 ## Example
 
 ```js
-const Call = require('@hapi/call');
+const Call = require('@panggilrofan/call-tea');
 
 // Create new router
 const router = new Call.Router();
@@ -63,7 +63,7 @@ Like the optional parameters, a wildcard parameter (for example `/{users*}`) may
 
 `{params*}`: Using this option, it matches anything. So `/users/{user*}` with match `/users/`, `/users/john`, `/users/john/doe`, `/users/john/doe/smith`
 
-For more details about path parameters, [read hapi.js docs](https://github.com/hapijs/hapi/blob/master/API.md#path-parameters).
+For more details about path parameters, [read hapi.js docs](https://github.com/panggilrofan/hapi/blob/master/API.md#path-parameters).
 
 ## Routing order
 
