@@ -1,8 +1,8 @@
 ﻿'use strict';
 
 const Decode = require('../lib/decode');
-const Code = require('@hapi/code');
-const Lab = require('@hapi/lab');
+const Code = require('@panggilrofan/code');
+const Lab = require('@panggilrofan/lab');
 
 
 const internals = {};

@@ -1,7 +1,7 @@
 'use strict';
 
-const Code = require('@hapi/code');
-const Lab = require('@hapi/lab');
+const Code = require('@panggilrofan/code');
+const Lab = require('@panggilrofan/lab');
 
 const Regex = require('../lib/regex');
 
@@ -76,7 +76,7 @@ describe('Call', () => {
                 '/a{p*3}': false
             };
 
-            const test = function (path, isValid) {
+            const test = function(path, isValid) {
 
                 it('validates the path \'' + path + '\' as ' + (isValid ? 'well-formed' : 'malformed'), () => {
 

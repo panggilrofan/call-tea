@@ -1,8 +1,8 @@
 'use strict';
 
 const Call = require('..');
-const Code = require('@hapi/code');
-const Lab = require('@hapi/lab');
+const Code = require('@panggilrofan/code');
+const Lab = require('@panggilrofan/lab');
 
 
 const internals = {};
@@ -121,7 +121,7 @@ describe('Router', () => {
             ['/n/a', '/n/{p}/{o*}']
         ];
 
-        const test = function (path, route) {
+        const test = function(path, route) {
 
             it('matches \'' + path + '\' to \'' + route + '\'', () => {
 
@@ -167,14 +167,30 @@ describe('Router', () => {
             }
 
             expect(router.routes.get('get').router._mixed.map((item) => [item.segment.segments, item.segment.length])).to.equal([
-                [['a', 'b', 'c'], 5],
-                [['a', 'b'], 4],
-                [['ab', 'b'], 3],
-                [['ac', 'b'], 3],
-                [['cc', 'b'], 3],
-                [['a', 'b'], 3],
-                [['a'], 2],
-                [['b'], 2]
+                [
+                    ['a', 'b', 'c'], 5
+                ],
+                [
+                    ['a', 'b'], 4
+                ],
+                [
+                    ['ab', 'b'], 3
+                ],
+                [
+                    ['ac', 'b'], 3
+                ],
+                [
+                    ['cc', 'b'], 3
+                ],
+                [
+                    ['a', 'b'], 3
+                ],
+                [
+                    ['a'], 2
+                ],
+                [
+                    ['b'], 2
+                ]
             ]);
         });
 
@@ -556,7 +572,7 @@ describe('Router', () => {
             }
         };
 
-        const test = function (path, matches, isCaseSensitive) {
+        const test = function(path, matches, isCaseSensitive) {
 
             const router = new Call.Router({ isCaseSensitive });
             router.add({ path, method: 'get' }, path);
@@ -567,7 +583,7 @@ describe('Router', () => {
             }
         };
 
-        const match = function (router, path, compare, result, isCaseSensitive) {
+        const match = function(router, path, compare, result, isCaseSensitive) {
 
             it((result ? 'matches' : 'unmatches') + ' the path \'' + path + '\' with ' + compare + ' (' + (isCaseSensitive ? 'case-sensitive' : 'case-insensitive') + ')', () => {
 
